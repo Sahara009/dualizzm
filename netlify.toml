@@ -1,0 +1,10 @@
+# Netlify сам определяет Next.js и подключает свой адаптер (OpenNext).
+# Важно: у Netlify нет постоянного диска. Сайт будет работать в демо-режиме:
+# база и загруженные фото живут во временной папке и сбрасываются. См. deploy/NETLIFY.md.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
